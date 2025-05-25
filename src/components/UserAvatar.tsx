@@ -6,7 +6,7 @@ type Props = {
 };
 
 const UserAvatar = ({ user, onClick }: Props) => (
-  <div className="user-avatar" onClick={onClick}>
+  <div className="UserAvatar" onClick={onClick}>
     <img src={user.profilePic} alt={user.userName} />
     <p>{user.userName}</p>
   </div>

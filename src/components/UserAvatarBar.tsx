@@ -7,7 +7,7 @@ type Props = {
 };
 
 const UserAvatarBar = ({ users, onOpenStory }: Props) => (
-  <div className="users-bar">
+  <div className="UsersBar">
     {users.map((user, index) => (
       <UserAvatar
         key={user.userId}

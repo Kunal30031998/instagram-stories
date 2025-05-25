@@ -7,7 +7,7 @@ type Props = {
   onClose: () => void;
   onNext: () => void;
   onPrev: () => void;
-  fadeKey: number;
+  fadeInKey: number;
 };
 
 const StoryViewer = ({
@@ -17,7 +17,7 @@ const StoryViewer = ({
   onClose,
   onNext,
   onPrev,
-  fadeKey,
+  fadeInKey,
 }: Props) => {
   const handleTap = (e: React.MouseEvent<HTMLDivElement>) => {
     const x = e.clientX;
@@ -25,12 +25,12 @@ const StoryViewer = ({
   };
 
   return (
-    <div className="story-overlay" onClick={handleTap}>
-      <div key={fadeKey} className="story-fade story-open-animation">
+    <div className="StoryOverlay" onClick={handleTap}>
+      <div key={fadeInKey} className="StoryFade StoryOpenAnimation">
         <Header profilePic={profilePic} userName={userName} />
-        <img src={storyUrl} alt="story" className="story-full" />
+        <img src={storyUrl} alt="story" className="StoryFull" />
       </div>
-      <button className="close-btn" onClick={onClose}>
+      <button className="CloseBtn" onClick={onClose}>
         ×
       </button>
     </div>

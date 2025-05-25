@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function useAutoAdvance(callback: () => void, deps: any[]) {
+export function useUpdateStoryInFiveSec(callback: () => void, deps: any[]) {
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {

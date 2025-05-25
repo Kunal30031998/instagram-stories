@@ -5,21 +5,21 @@
   margin: auto;
 }
 
-.users-bar {
+.UsersBar {
   display: flex;
   overflow-x: auto;
   gap: 16px;
   padding: 12px 0;
 }
 
-.user-avatar {
+.UserAvatar {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
 
-.user-avatar img {
+.UserAvatar img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -27,12 +27,12 @@
   object-fit: cover;
 }
 
-.user-avatar p {
+.UserAvatar p {
   font-size: 12px;
   margin-top: 4px;
 }
 
-.story-overlay {
+.StoryOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -45,13 +45,13 @@
   z-index: 10;
 }
 
-.story-fade {
+.StoryFade {
   position: relative;
   max-width: 100%;
   max-height: 100%;
 }
 
-.story-full {
+.StoryFull {
   max-height: 80vh;
   max-width: 90vw;
   border-radius: 10px;
@@ -59,7 +59,7 @@
   margin-top: 50px;
 }
 
-.story-header {
+.StoryHeader {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -69,7 +69,7 @@
   z-index: 2;
 }
 
-.story-user-pic {
+.StoryUserPic {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -77,13 +77,13 @@
   object-fit: cover;
 }
 
-.story-user-name {
+.StoryUserName {
   color: white;
   font-weight: bold;
   font-size: 14px;
 }
 
-.close-btn {
+.CloseBtn {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -106,7 +106,7 @@
   }
 }
 
-.story-open-animation {
+.StoryOpenAnimation {
   animation: zoomFadeIn 0.35s ease-out;
 }
 

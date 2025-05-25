@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { UserStory } from "./types";
-import { useAutoAdvance } from "./hooks/useAutoAdvance";
+import { useUpdateStoryInFiveSec } from "./hooks/useUpdateStoryInFiveSec";
 import UserAvatarBar from "./components/UserAvatarBar";
 import StoryViewer from "./components/StoryViewer";
 
@@ -11,7 +11,7 @@ function App() {
   const [users, setUsers] = useState<UserStory[]>([]);
   const [currentUserIndex, setCurrentUserIndex] = useState<number | null>(null);
   const [currentStoryIndex, setCurrentStoryIndex] = useState<number>(0);
-  const [fadeKey, setFadeKey] = useState<number>(0);
+  const [fadeInKey, setFadeInKey] = useState<number>(0);
 
   useEffect(() => {
     fetch("/data/stories.json")
@@ -19,14 +19,14 @@ function App() {
       .then((data) => setUsers(data));
   }, []);
 
-  useAutoAdvance(() => {
+  useUpdateStoryInFiveSec(() => {
     if (currentUserIndex !== null) goNext();
   }, [currentUserIndex, currentStoryIndex]);
 
   const openStory = (userIndex: number) => {
     setCurrentUserIndex(userIndex);
     setCurrentStoryIndex(0);
-    setFadeKey((prev) => prev + 1);
+    setFadeInKey((prev) => prev + 1);
   };
 
   const closeStory = () => {
@@ -46,7 +46,7 @@ function App() {
     } else {
       closeStory();
     }
-    setFadeKey((prev) => prev + 1);
+    setFadeInKey((prev) => prev + 1);
   };
 
   const goPrev = () => {
@@ -59,19 +59,19 @@ function App() {
       setCurrentUserIndex(currentUserIndex - 1);
       setCurrentStoryIndex(prevUser.stories.length - 1);
     }
-    setFadeKey((prev) => prev + 1);
+    setFadeInKey((prev) => prev + 1);
   };
 
   if (!isMobile)
     return (
-      <div className="mobile-only-message">
+      <div className="MobileOnlyMessage">
         This app is only for mobile devices.
       </div>
     );
 
   return (
     <div className="App">
-      <h2>Instagram Stories Clone</h2>
+      <h2>Instagram</h2>
       <UserAvatarBar users={users} onOpenStory={openStory} />
 
       {currentUserIndex !== null && (
@@ -82,7 +82,7 @@ function App() {
           onClose={closeStory}
           onNext={goNext}
           onPrev={goPrev}
-          fadeKey={fadeKey}
+          fadeInKey={fadeInKey}
         />
       )}
     </div>

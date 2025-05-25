@@ -4,9 +4,9 @@ type Props = {
 };
 
 const Header = ({ profilePic, userName }: Props) => (
-  <div className="story-header">
-    <img src={profilePic} alt="profile" className="story-user-pic" />
-    <span className="story-user-name">{userName}</span>
+  <div className="StoryHeader">
+    <img src={profilePic} alt="profile" className="StoryUserPic" />
+    <span className="StoryUserName">{userName}</span>
   </div>
 );
 

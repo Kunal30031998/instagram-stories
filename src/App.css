@@ -5,21 +5,21 @@
   margin: auto;
 }
 
-.users-bar {
+.UsersBar {
   display: flex;
   overflow-x: auto;
   gap: 16px;
   padding: 12px 0;
 }
 
-.user-avatar {
+.UserAvatar {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
 
-.user-avatar img {
+.UserAvatar img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -27,12 +27,12 @@
   object-fit: cover;
 }
 
-.user-avatar p {
+.UserAvatar p {
   font-size: 12px;
   margin-top: 4px;
 }
 
-.story-overlay {
+.StoryOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -46,13 +46,13 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.story-full {
+.StoryFull {
   max-width: 90vw;
   max-height: 90vh;
   border-radius: 10px;
 }
 
-.close-btn {
+.CloseBtn {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -74,12 +74,12 @@
   }
 }
 
-.story-header {
+.StoryHeader {
   display: flex;
   align-items: center;
 }
 
-.story-header img {
+.StoryHeader img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -87,7 +87,7 @@
   object-fit: cover;
 }
 
-.story-user-name {
+.StoryUserName {
   color: white;
   margin-left: 10px;
 }
@@ -98,7 +98,7 @@
     display: none;
   }
 
-  .mobile-only-message {
+  .MobileOnlyMessage {
     display: block;
     padding: 2rem;
     text-align: center;
