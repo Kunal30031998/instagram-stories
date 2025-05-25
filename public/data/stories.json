@@ -1,0 +1,22 @@
+[
+  {
+    "userId": 1,
+    "userName": "Alice",
+    "profilePic": "https://randomuser.me/api/portraits/women/1.jpg",
+    "stories": [
+      "https://picsum.photos/id/1005/300/500",
+      "https://picsum.photos/id/1006/300/500",
+      "https://picsum.photos/id/1004/300/500"
+    ]
+  },
+  {
+    "userId": 2,
+    "userName": "Bob",
+    "profilePic": "https://randomuser.me/api/portraits/men/2.jpg",
+    "stories": [
+      "https://picsum.photos/id/1011/300/500",
+      "https://picsum.photos/id/1012/300/500",
+      "https://picsum.photos/id/1013/300/500"
+    ]
+  }
+]
